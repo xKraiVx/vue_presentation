@@ -1,5 +1,5 @@
 <template>
-  <div :class="content.name.split('/')[1]" :key="content.name">
+  <div class="benefits">
     <div class="container">
       <h1 :key="content.title">{{ content.title }}</h1>
       <accordion
@@ -32,3 +32,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import "../assets/scss/pages/benefits.scss"
+</style>

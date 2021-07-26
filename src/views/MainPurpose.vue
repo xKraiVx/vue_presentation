@@ -2,7 +2,12 @@
   <div class="main-purpose">
     <div class="container">
       <h1 :key="content.title">{{ content.title }}</h1>
-      <accordion v-for="(accordion, key) in content.accordions" :open="true" :key="`accordion_${key}`" :income="accordion" />
+      <accordion
+        v-for="(accordion, key) in content.accordions"
+        :open="true"
+        :key="`accordion_${key}`"
+        :income="accordion"
+      />
     </div>
   </div>
 </template>
