@@ -1,0 +1,27 @@
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &--prev{
+      left: 10px;
+    }
+    &--next{
+      right: 10px;
+    }
+  }
+  a {
+    margin: 0 10px;
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+

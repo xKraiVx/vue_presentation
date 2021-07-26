@@ -1,10 +1,8 @@
 <template>
-  <div class="home">
+  <div :class="content.name.split('/')[1]">
     <div class="container">
-      <img alt="Vue logo" :src="require(`../assets/images/${content.logo}`)" />
-      <h2>{{ content.subtitle }}</h2>
-      <h1>{{ content.title }}</h1>
-      <accordion :income="content.accordion" />
+      <h1 :key="content.title">{{ content.title }}</h1>
+      <accordion v-for="(accordion, key) in content.accordions" :open="true" :key="`accordion_${key}`" :income="accordion" />
     </div>
   </div>
 </template>
@@ -17,18 +15,14 @@ export default {
     content: function () {
       let slidesContent = json.slides,
         currentRoute = this.$router.currentRoute.value.path,
-        currentSlideContent = slidesContent.filter(
+        currentSledeContent = slidesContent.filter(
           (element) => element.name === currentRoute
         )[0];
-      return currentSlideContent;
+      return currentSledeContent;
     },
   },
-  methods: {},
   components: {
     Accordion,
   },
 };
 </script>
-<style lang="scss" scoped>
-@import "../assets/scss/pages/home.scss";
-</style>

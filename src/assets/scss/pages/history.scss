@@ -1,0 +1,50 @@
+.history {
+    margin-top: 10vh;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__wrapper {
+    flex-basis: 70%;
+    text-align: left;
+  }
+  &__text{
+      text-indent: 2rem;
+  }
+  &__author {
+    margin-left: 20px;
+    max-width: 300px;
+    &-img {
+      animation: borderAnim 12s ease infinite alternate;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes borderAnim {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  20% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 57% 43% 70% 30% / 68% 73% 27% 32%;
+  }
+  45% {
+    border-radius: 57% 43% 70% 30% / 68% 73% 27% 32%;
+  }
+  50% {
+    border-radius: 70% 30% 54% 46% / 23% 26% 74% 77%;
+  }
+  70% {
+    border-radius: 70% 30% 54% 46% / 23% 26% 74% 77%;
+  }
+  75% {
+    border-radius: 27% 73% 54% 46% / 23% 66% 34% 77%;
+  }
+  100% {
+    border-radius: 27% 73% 54% 46% / 23% 66% 34% 77%;
+  }
+}

@@ -1,0 +1,15 @@
+a {
+  font-weight: bold;
+  color: $main;
+  transition: color .3s ease;
+  &:hover{
+    color: $secondary;
+  }
+  &.router-link-exact-active {
+    color: $secondary;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  padding: 1rem 0;
+}

@@ -1,0 +1,10 @@
+.project-examples{
+    .accordion__content-list-item{
+        &-content{
+            flex-basis: unset;
+        }
+        &-image{
+            max-width: 85%;
+        }
+    }
+}
