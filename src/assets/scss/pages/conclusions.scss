@@ -1,0 +1,21 @@
+.conclusions {
+  ul {
+    list-style: circle;
+    li {
+      position: relative;
+      display: flex;
+      text-align: left;
+      padding-left: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        background: #42b983;
+        animation: animRotate 5s infinite forwards;
+      }
+    }
+  }
+}
